@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package com.soriyama.repaso_3;
+package com.soriyama.EC_ejercicios;
 
 import java.util.Scanner;
 
@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author esteb
  */
-public class Repaso_3 {
+public class EC_1 {
 
     private static Scanner sc = new Scanner(System.in);
 

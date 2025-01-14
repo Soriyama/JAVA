@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.soriyama.repaso_4;
+package com.soriyama.ED_ejercicios;
 import java.lang.reflect.MalformedParameterizedTypeException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -12,7 +12,7 @@ import javax.swing.AbstractListModel;
  *
  * @author esteb
  */
-public class Repaso_4 {
+public class ED_1 {
 
     private static Scanner sc = new Scanner(System.in);
 
