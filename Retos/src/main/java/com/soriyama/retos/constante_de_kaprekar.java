@@ -68,9 +68,11 @@ Salida de ejemplo
 0
 7
 */
+import java.util.Scanner;
 public class constante_de_kaprekar {
 
     public static void main(String[] args) {
        
+        
     }
 }

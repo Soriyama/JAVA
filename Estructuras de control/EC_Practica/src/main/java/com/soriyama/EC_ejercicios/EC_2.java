@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author esteb
  */
-public class EC_1 {
+public class EC_2 {
 
     private static Scanner sc = new Scanner(System.in);
 
@@ -19,7 +19,7 @@ public class EC_1 {
         int opcion;
 
         do {
-            System.out.println("Selecciona el ejercicio del bloque UT3_1:");
+            System.out.println("Selecciona el ejercicio del bloque UT3_2:");
             System.out.println("0- Salir");
 
             // Mostrar todos los ejercicios dinámicamente
@@ -52,7 +52,6 @@ public class EC_1 {
                         ejercicio4();
                     case 5 ->
                         ejercicio5();
-                    
 
                     // Agrega más casos según los ejercicios implementados
                     default ->
@@ -66,23 +65,9 @@ public class EC_1 {
      *
      */
     public static void ejercicio1() {
-        int a = 0;
-        int b = 0;
-        System.out.println("Introduce el primer numero");
-        a = sc.nextInt();
-        System.out.println("Introduce el segundo numero");
-        b = sc.nextInt();
 
-        if ((a - b) > b) {
-            System.out.println("a-b es mayor a b");
-        } else {
-            System.out.println("a-b es menor a b");
-        }
-
-        if ((b - a) > a) {
-            System.out.println("b-a es mayor a a");
-        } else {
-            System.out.println("b-a es menor a a");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("Numero: " + i);
         }
 
     }
@@ -91,49 +76,54 @@ public class EC_1 {
      *
      */
     public static void ejercicio2() {
-        for (int i = 0; i <= 5; i++) {
-            System.out.println("Hola");
+        for (int i = 1; i <= 20; i++) {
 
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
         }
+
     }
 
     /**
      *
      */
     public static void ejercicio3() {
-        int num;
-        System.out.println("Introduce un numero entero");
-        num = sc.nextInt();
-        System.out.println("El numero introducido es :" + num);
-        System.out.println("El doble de" + num + " es: " + 2 * num);
-        System.out.println("El cuadrado del numero " + num + " es: " + num * num);
+        for (int i = 1; i <= 100; i++) {
 
-    }
-
-    /**
-     *
-     */
-    public static void ejercicio4() {
-        int n = 1;
-
-        while (n <= 20) {
-            System.out.println(n);
-            n++;
+            if (i % 7 == 0) {
+                System.out.println(i);
+            }
         }
     }
 
     /**
      *
      */
-    public static void ejercicio5() {
-        int n, muestra = 1;
-        do {            
-            System.out.println("Muestra" + muestra); 
-            System.out.println("introduce el numero de la muestra");
-            n = sc.nextInt();
-        } while (n != muestra++);
-        
+    public static void ejercicio4() {
+        int suma= 0;
+        for (int i = 1; i <= 200; i++) {
+
+            if (i % 2 == 0) {
+                if(!(i % 10 == 0))
+                suma += i;
+            }
+        }
+        System.out.println("La suma total es: "+suma);
     }
 
-    
+    /**
+     *
+     */
+    public static void ejercicio5() {
+        int n;
+        System.out.println("Introduce un numero: ");
+        n = sc.nextInt();
+        
+        for(int i = 0; i<=n -1; i++){
+            System.out.print("A");
+        }
+        System.out.println("");
+    }
+
 }
