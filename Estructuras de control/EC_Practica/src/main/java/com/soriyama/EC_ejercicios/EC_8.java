@@ -94,7 +94,6 @@ public class EC_8 {
      *
      */
     public static void ejercicio1() {
-       
 
     }
 
@@ -103,14 +102,12 @@ public class EC_8 {
      */
     public static void ejercicio2() {
 
-       
     }
 
     /**
      *
      */
     public static void ejercicio3() {
-      
 
     }
 
@@ -118,7 +115,7 @@ public class EC_8 {
      *
      */
     public static void ejercicio4() {
-       
+
     }
 
     /**
@@ -126,21 +123,20 @@ public class EC_8 {
      */
     public static void ejercicio5() {
 
-       
     }
 
     /**
      *
      */
     public static void ejercicio6() {
-       
+
     }
 
     /**
      *
      */
     public static void ejercicio7() {
-        
+
     }
 
     /**
@@ -168,7 +164,7 @@ public class EC_8 {
      *
      */
     public static void ejercicio11() {
-        
+
     }
 
     /**
@@ -196,21 +192,47 @@ public class EC_8 {
      *
      */
     public static void ejercicio15() {
-
+        System.out.println("Introduce un numero para el arbol ascendente");
+        int numero = sc.nextInt();
+        for (int i = 1; i <= numero; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
     }
 
     /**
      *
      */
     public static void ejercicio16() {
+        System.out.println("Introduce un numero para el arbol descendente");
+        int numero = sc.nextInt();
+        for (int i = numero; i >= 1; i--) {
+            for (int j = i; j >= 1; j--) {
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
-       
     }
 
     /**
      *
      */
     public static void ejercicio17() {
+        System.out.println("Introduce un numero para el arbol");
+        int numero = sc.nextInt();
+        for (int i = 1; i <= numero; i++) {
+            for (int l = 1; l <= numero - i; l++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i) - 1; j++) {
+
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
     }
 

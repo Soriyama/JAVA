@@ -1,8 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.soriyama.EC_ejercicios;
+package com.soriyama.clases;
 
 import java.util.Scanner;
 
@@ -10,7 +9,7 @@ import java.util.Scanner;
  *
  * @author esteb
  */
-public class EC_5 {
+public class Clases {
 
     private static Scanner sc = new Scanner(System.in);
 
@@ -61,54 +60,57 @@ public class EC_5 {
         } while (opcion != 0); // Repetir mientras no se elija salir
     }
 
-    /**
-     *
-     */
     public static void ejercicio1() {
-        System.out.println("Introduce un numero");
-        int numero = sc.nextInt();
-
-        System.out.println("El numero tiene " + String.valueOf(numero).length() + " cifras");
+        //d)
+        Producto p1 = new Producto("Ordenador", 1000, 0.21);
+        double precioFinalP1 = p1.calcularPrecioFinal();
+        Producto p2 = new Producto("Pan", 2, 0.04);
+        double precioFinalP2 = p2.calcularPrecioFinal();
+        System.out.println("El precio final de p1 es: " + precioFinalP1);
+        System.out.println("El precio final de p2 es: " + precioFinalP2);
+        //f)
+        System.out.println("El precio total de ambos es: " + (precioFinalP1 + precioFinalP2));
+        //g)
+        p1.setDescuento(0.1);
+        p2.setDescuento(0.1);
+        double precioFinalP1Des = p1.calcularPrecioFinal();
+        double precioFinalP2Des = p2.calcularPrecioFinal();
+        System.out.println("El precio final con descuento del 10% de p1 es: " + precioFinalP1Des);
+        System.out.println("El precio final con descuento del 10% de p2 es: " + precioFinalP2Des);
+        //h)
+        p2.nombre = "bollo";
+        System.out.println("El nombre de p2 es: " + p2.nombre);
 
     }
 
-    /**
-     *
-     */
     public static void ejercicio2() {
-        int cifra1, cifra2;
-        System.out.println("Introduce la primea cifra: ");
-        cifra1 = sc.nextInt();
-        System.out.println("Introduce la segunda cifra: ");
-        cifra2 = sc.nextInt();
 
-        System.out.println("Las cifras que hay entre la cifra mayor y la menor son: ");
-        int mayor = Math.max(cifra1, cifra2);
-        int menor= Math.max(cifra1, cifra2);
-
-        for (int i = mayor; i >= menor; i--) {
-            System.out.print(i + "");
-        }
-        System.out.println(" ");
     }
 
-    /**
-     *
-     */
     public static void ejercicio3() {
+        Perro can1 = new Perro();
+        Perro can2 = new Perro();
+
+        can1.setAlto(15);
+        can1.setPeso(8.5f);
+        can1.setSonido("Bark");
+        can1.setDomestico(true);
+
+        System.out.println("El perro es " + can1.getAlto() + " cm de alto, pesa " + can1.getPeso() + ", hace " + can1.getSonido() + " y " + (can1.isDomestico() == true ? "es domestico" : "no es domestico"));
+
+        can2.setAlto(40);
+        can2.setPeso(20f);
+        can2.setSonido("grrr");
+        can2.setDomestico(false);
+
+        System.out.println("El perro es " + can2.getAlto() + " cm de alto, pesa " + can2.getPeso() + ", hace " + can2.getSonido() + " y " + (can2.isDomestico() == true ? "es domestico" : "no es domestico"));
 
     }
 
-    /**
-     *
-     */
     public static void ejercicio4() {
 
     }
 
-    /**
-     *
-     */
     public static void ejercicio5() {
 
     }

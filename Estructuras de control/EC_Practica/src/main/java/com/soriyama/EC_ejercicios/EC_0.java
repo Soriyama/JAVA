@@ -1,3 +1,7 @@
+/**
+ *
+ * @author esteb
+ */
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -10,16 +14,16 @@ import java.util.Scanner;
  *
  * @author esteb
  */
-public class EC_4 {
+public class EC_0 {
 
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int numeroEjercicios = 2; // Número total de ejercicios
+        int numeroEjercicios = 5; // Número total de ejercicios
         int opcion;
 
         do {
-            System.out.println("Selecciona el ejercicio del bloque UT3_4:");
+            System.out.println("Selecciona el ejercicio del bloque UT3_5:");
             System.out.println("0- Salir");
 
             // Mostrar todos los ejercicios dinámicamente
@@ -46,6 +50,12 @@ public class EC_4 {
                         ejercicio1();
                     case 2 ->
                         ejercicio2();
+                    case 3 ->
+                        ejercicio3();
+                    case 4 ->
+                        ejercicio4();
+                    case 5 ->
+                        ejercicio5();
 
                     // Agrega más casos según los ejercicios implementados
                     default ->
@@ -59,13 +69,29 @@ public class EC_4 {
      *
      */
     public static void ejercicio1() {
-        int numero = 5;
-        int factorial = 1;
-        for (int i = numero; i > 0; i--) {
-            factorial *= i;
+        System.out.println("Introduce un numero para el arbol");
+        int numero = sc.nextInt();
+        for (int i = 1; i <= numero; i++) {
+            for (int l = 1; l <= numero - i; l++) {
+                System.out.print(" ");
+            }
+            System.out.print("O");
+            if (i == numero) {
+                for (int j = 1; j <= (2 * i) - 3; j++) {
 
+                    System.out.print("O");
+                }
+            } else {
+                for (int j = 1; j <= (2 * i) - 3; j++) {
+
+                    System.out.print("*");
+                }
+            }
+            if (i > 1) {
+                System.out.print("O");
+            }
+            System.out.println("");
         }
-        System.out.println("Factorial de " + numero + " es: " + factorial);
 
     }
 
@@ -73,24 +99,27 @@ public class EC_4 {
      *
      */
     public static void ejercicio2() {
-        int numero = 0;
 
-        do {
-            System.out.println("Introduce un numero para calcular factorial");
-            numero = sc.nextInt();
-            if(numero < 0 || numero > 20 ){
-                System.out.println("Error. Introduce un numero entre 0 y 20");
-            }
+    }
 
-        } while (numero < 0 || numero > 20);
-        
-        long factorial = 1;
-        for (int i = numero; i > 0; i--) {
-            factorial *= i;
+    /**
+     *
+     */
+    public static void ejercicio3() {
 
-        }
-        System.out.println("Factorial de " + numero + " es: " + factorial);
-        
+    }
+
+    /**
+     *
+     */
+    public static void ejercicio4() {
+
+    }
+
+    /**
+     *
+     */
+    public static void ejercicio5() {
 
     }
 
