@@ -108,6 +108,17 @@ public class Clases {
     }
 
     public static void ejercicio4() {
+        Perro can1 = new Perro();
+        Perro can2 = new Perro(40,20f,"grrr","Carne", false);
+
+        can1.setAlto(15);
+        can1.setPeso(8.5f);
+        can1.setSonido("Bark");
+        can1.setDomestico(true);
+
+        System.out.println("El perro 1 es " + can1.getAlto() + " cm de alto, pesa " + can1.getPeso() + ", hace " + can1.getSonido() + " y " + (can1.isDomestico() == true ? "es domestico" : "no es domestico"));
+
+        System.out.println("El perro 2 es " + can2.getAlto() + " cm de alto, pesa " + can2.getPeso() + ", hace " + can2.getSonido() + ", come " + can2.getAlimentacion() + " y " + (can2.isDomestico() == true ? "es domestico" : "no es domestico"));
 
     }
 

@@ -27,6 +27,15 @@ public class Perro {
         alimentacion = new String();
         domestico = false;
     }
+
+    Perro(float _alto, float _peso, String _sonido,
+            String _alimentacion, boolean _domestico) {
+        alto = _alto;
+        peso = _peso;
+        sonido = _sonido;
+        alimentacion = _alimentacion;
+        domestico = _domestico;
+    }
 //Creamos los método que caracterizan el comportamiento del objeto
 
     public float getAlto() {
