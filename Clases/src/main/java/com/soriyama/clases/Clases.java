@@ -12,13 +12,14 @@ import java.util.Scanner;
 public class Clases {
 
     private static Scanner sc = new Scanner(System.in);
+    private static Cuenta cuenta;
 
     public static void main(String[] args) {
-        int numeroEjercicios = 5; // Número total de ejercicios
+        int numeroEjercicios = 17; // Número total de ejercicios
         int opcion;
 
         do {
-            System.out.println("Selecciona el ejercicio del bloque UT3_5:");
+            System.out.println("Selecciona el ejercicio del bloque UT-5:");
             System.out.println("0- Salir");
 
             // Mostrar todos los ejercicios dinámicamente
@@ -51,6 +52,30 @@ public class Clases {
                         ejercicio4();
                     case 5 ->
                         ejercicio5();
+                    case 6 ->
+                            ejercicio6();
+                    case 7 ->
+                            ejercicio7();
+                    case 8 ->
+                            ejercicio8();
+                    case 9 ->
+                            ejercicio9();
+                    case 10 ->
+                            ejercicio10();
+                    case 11 ->
+                            ejercicio11();
+                    case 12 ->
+                            ejercicio12();
+                    case 13 ->
+                            ejercicio13();
+                    case 14 ->
+                            ejercicio14();
+                    case 15 ->
+                            ejercicio15();
+                    case 16 ->
+                            ejercicio16();
+                    case 17 ->
+                            ejercicio17();
 
                     // Agrega más casos según los ejercicios implementados
                     default ->
@@ -123,6 +148,103 @@ public class Clases {
     }
 
     public static void ejercicio5() {
+    Rectangulo rectangulo1 = new Rectangulo();
+    Rectangulo rectangulo2 = new Rectangulo(15.1,20,"blanco");
+    rectangulo1.setAncho(14.1);
+    rectangulo1.setAlto(10);
+    rectangulo1.setColor("azul");
+        System.out.println("El rectangulo 1 tiene un alto, ancho y color de:" + rectangulo1.getAlto() + ", " + rectangulo1.getAncho()+ " y es " + rectangulo1.getColor());
+        System.out.println("El rectangulo 2 tiene un alto, ancho y color de:" + rectangulo2.getAlto() + ", " + rectangulo2.getAncho()+ " y es " + rectangulo2.getColor());
+    }
+
+    public static void ejercicio6() {
+        System.out.println("Inserta el radio de la 1ª circunferencia: ");
+        double radio1 = sc.nextDouble();
+        System.out.println("Inserta el radio de la 2ª circunferencia: ");
+        double radio2 = sc.nextDouble();
+
+        Circulo circulo1 = new Circulo();
+        circulo1.setRadio(15.5);
+        System.out.println("1ª circunferencia:");
+        System.out.println("Radio: "+ circulo1.getRadio());
+        System.out.println("Diámetro: "+ circulo1.calcularDiametro());
+        System.out.println("Circunferencia: "+ circulo1.calcularCircunferencia());
+        System.out.println("Superficie: "+ circulo1.calcularSuperficie());
+
+        System.out.println();
+
+        Circulo circulo2 = new Circulo(radio2);
+        System.out.println("2ª circunferencia:");
+        System.out.println("Radio: "+ circulo2.getRadio());
+        System.out.println("Diámetro: "+ circulo2.calcularDiametro());
+        System.out.println("Circunferencia: "+ circulo2.calcularCircunferencia());
+        System.out.println("Superficie: "+ circulo2.calcularSuperficie());
+
+    }
+
+    public static void ejercicio7() {
+
+    }
+
+    public static void ejercicio8() {
+
+    }
+
+    public static void ejercicio9() {
+
+    }
+
+    public static void ejercicio10() {
+        Cuenta cuenta = new Cuenta("Esteban", 35.5);
+        cuenta.ingresar(50.2);
+        System.out.println();
+        cuenta.retirar(40);
+        System.out.println();
+        cuenta.retirar(47);
+    }
+
+    public static void ejercicio11() {
+
+    }
+
+    public static void ejercicio12() {
+    EjemplarLibro libro1= new EjemplarLibro("El Quijote");
+    EjemplarLibro libro2= new EjemplarLibro("El señor de los anillos");
+
+    boolean prestamo1 = libro1.prestar();
+        System.out.println("El libro de El Quijote " + (prestamo1? "se peude prestar" : "ya esta prestado"));
+        System.out.println();
+        EjemplarLibro libro3= new EjemplarLibro(libro1);
+        System.out.println(libro3);
+        boolean prestamo2 = libro1.prestar();
+        System.out.println("El libro de El Quijote " + (prestamo2? "se peude prestar" : "ya esta prestado"));
+        System.out.println();
+
+        boolean devolucion1 = libro1.devolver();
+        System.out.println("El libro de El Quijote " + (devolucion1? "se ha devuelto" : "no esta prestado"));
+        System.out.println();
+        boolean prestamo3 = libro1.prestar();
+        System.out.println("El libro de El Quijote " + (prestamo3? "se peude prestar" : "ya esta prestado"));
+
+    }
+
+    public static void ejercicio13() {
+
+    }
+
+    public static void ejercicio14() {
+
+    }
+
+    public static void ejercicio15() {
+
+    }
+
+    public static void ejercicio16() {
+
+    }
+
+    public static void ejercicio17() {
 
     }
 
