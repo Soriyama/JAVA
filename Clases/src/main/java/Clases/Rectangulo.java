@@ -1,4 +1,4 @@
-package com.soriyama.Clases;
+package Clases;
 
 public class Rectangulo {
     private double alto;

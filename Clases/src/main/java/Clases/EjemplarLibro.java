@@ -1,4 +1,4 @@
-package com.soriyama.Clases;
+package Clases;
 import java.time.LocalDate;
 
 public class EjemplarLibro {
