@@ -1,14 +1,14 @@
-package ClasesAvanzadas.Ejercicios;
+package ClasesAvanzadas.Ejercicios.Ej_3;
 
-public class Ej_1 {
+public class Ej_3 {
     public static void main(String[] args) {
-    Padre metodoPadre= new Padre();
-    Hija metodoHija = new Hija();
-    Nieta metodoNieta= new Nieta();
+       Padre metodoPadre= new Padre();
+       Hija metodoHija = new Hija();
+        Nieta metodoNieta= new Nieta();
         System.out.println("b:");
-    metodoPadre.metodo1();
-    metodoHija.metodo1();
-    metodoNieta.metodo1();
+        metodoPadre.metodo1();
+        metodoHija.metodo1();
+        metodoNieta.metodo1();
         System.out.println("c:");
         metodoPadre.metodo2();
         metodoHija.metodo2();
@@ -37,7 +37,7 @@ class Padre{
         System.out.println("Metodo 3 en el padre");
     }
 }
-class Hija extends Padre{
+class Hija extends Padre {
     public void metodoHija(){
         System.out.println("Soy la clase Hija");
     }
@@ -51,7 +51,7 @@ class Hija extends Padre{
         System.out.println("Metodo 2 en la Hija");
     }
 }
-class Nieta extends Hija{
+class Nieta extends Hija {
     public void metodoNieta(){
         System.out.println("Soy la clase Nieta");
     }
@@ -65,4 +65,3 @@ class Nieta extends Hija{
         System.out.println("Metodo 2 en la Nieta");
     }
 }
-
