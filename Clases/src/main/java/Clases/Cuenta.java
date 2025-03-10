@@ -1,4 +1,4 @@
-package com.soriyama.clases;
+package com.soriyama.Clases;
 
 public class Cuenta {
     private String titular;

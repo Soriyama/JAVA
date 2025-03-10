@@ -1,6 +1,6 @@
-package com.soriyama.clases;
+package com.soriyama.Clases;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+
 public class EjemplarLibro {
     private String tituloLibro;
     private LocalDate fecha;
