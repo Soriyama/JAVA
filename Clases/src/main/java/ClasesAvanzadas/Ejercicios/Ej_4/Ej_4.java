@@ -21,6 +21,7 @@ public abstract void metodo2();
 protected void metodo3(){
 //cuerpo del metodo
 }
+//Necesitamos cambiar de private a protected para poder acceder al método desde las clases hijas
     protected void metodo4(){
 //cuerpo del metodo
 System.out.println("PREMIO!!!");

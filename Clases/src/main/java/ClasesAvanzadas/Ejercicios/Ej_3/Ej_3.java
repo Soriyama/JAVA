@@ -2,9 +2,9 @@ package ClasesAvanzadas.Ejercicios.Ej_3;
 
 public class Ej_3 {
     public static void main(String[] args) {
-       Padre metodoPadre= new Padre();
+      Padre metodoPadre= new Padre();
        Hija metodoHija = new Hija();
-        Nieta metodoNieta= new Nieta();
+       Nieta metodoNieta= new Nieta();
         System.out.println("b:");
         metodoPadre.metodo1();
         metodoHija.metodo1();

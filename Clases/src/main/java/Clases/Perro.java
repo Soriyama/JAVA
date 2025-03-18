@@ -20,7 +20,7 @@ public class Perro {
 //Creamos un constructor que servirá para crear objetos
 //de esta clase e inicializar las propiedades de los objetos
 
-    Perro() {
+    public Perro() {
         alto = 0.0f;
         peso = 0.0f;
         sonido = new String();
