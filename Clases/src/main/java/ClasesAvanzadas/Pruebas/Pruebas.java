@@ -1,47 +1,52 @@
 package ClasesAvanzadas.Pruebas;
-class ClaseA{
+class Persona{
+    static int contadorPersonas = 0;
+    private String nombre;
+    private String apellido;
 
-    public void mostrar1(){
-        System.out.println("mostrar 1 en clase A");
+    public Persona(String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        // Incrementar el atributo static
+        Persona.contadorPersonas++;
     }
-    public void mostrar2(){
-        System.out.println("mostrar 2 en clase A");
-    };
-    public void mostrar3(){
-
-    };
-}
-
-class ClaseB extends ClaseA{
 
     @Override
-    public void mostrar2(){
-        System.out.println("mostrar 2 en clase B");
+    public String toString(){
+        return "Nombre: " + this.nombre + ", Apellido: " + this.apellido
+                + ", Dir. Mem. " + super.toString();
     }
 
-    public void mostrar3(){
-        System.out.println("mostrar 3 en clase B");
+    public String getNombre() {
+        return this.nombre;
     }
-}
-class ClaseC extends ClaseB{
 
-    @Override
-    public void mostrar2(){
-        System.out.println("mostrar 2 en clase C");
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return this.apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 }
+
+
 
 
 public class Pruebas {
     public static void main(String[] args) {
-    ClaseA clase;
-    ClaseA clase1;
-
-    clase = new ClaseB();
-    clase1 = new ClaseC();
-        clase1.mostrar1();
-        clase.mostrar2();
-        clase1.mostrar3();
-        clase1.mostrar2();
+        System.out.println("*** Creacion de Clase y Objetos Persona ***");
+        System.out.println("Variable estática: " + Persona.contadorPersonas);
+        var objeto1 = new Persona("Layla", "Acosta");
+        System.out.println(objeto1); // automaticamente se llama toString
+        System.out.println("Variable estática: " + Persona.contadorPersonas);
+        // Segundo objeto
+        var objeto2 = new Persona("Ian", "Gomez");
+        System.out.println(objeto2);
+        System.out.println("Variables estática: " + Persona.contadorPersonas);
     }
 }

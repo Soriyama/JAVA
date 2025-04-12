@@ -15,24 +15,36 @@ public class ProductoLectura {
         this.anio=anio;
     }
 
+    public String getTitulo() {
+        return titulo;
+    }
+
     public void mostrarInformacion(){
         System.out.println("Título: " + this.titulo);
         System.out.println("Editor: " + this.editor);
         System.out.println("Año: " + this.anio);
+    }
+    @Override
+    public String toString() {
+        return "ProductoLectura{" +
+                "titulo='" + titulo + '\'' +
+                ", editor='" + editor + '\'' +
+                ", anio=" + anio +
+                '}';
     }
 }
 
 class Libro extends ProductoLectura implements Inventariable{
     private String autor;
     private int numPaginas;
-    private static int codigo = 0;
+    static int codigo = 0;
     private String codigoInventariable;
 
     public Libro(String titulo, String editor, int anio, String autor, int numPaginas ){
-      super(titulo,editor,anio);
-      this.autor=autor;
-      this.numPaginas=numPaginas;
-      this.codigoInventariable=getCodigoInventario();
+        super(titulo,editor,anio);
+        this.autor=autor;
+        this.numPaginas=numPaginas;
+        this.codigoInventariable=getCodigoInventario();
     }
 
     @Override
@@ -46,18 +58,25 @@ class Libro extends ProductoLectura implements Inventariable{
     @Override
     public String getCodigoInventario(){
         codigo ++;
-        String codigoInventariable = "L" + String.valueOf(this.codigo);
+        String codigoInventariable = "L" + String.valueOf(codigo);
         return codigoInventariable;
     }
-
-
+    @Override
+    public String toString() {
+        return "Libro{" +
+                super.toString().substring(ProductoLectura.class.getSimpleName().length() + 1) + ", " + // Llamada a toString de la superclase
+                "autor='" + autor + '\'' +
+                ", numPaginas=" + numPaginas +
+                ", codigoInventariable='" + codigoInventariable + '\'' +
+                '}';
+    }
 }
 
 class Revista extends ProductoLectura implements Inventariable{
-   private String tema;
-   private int numeroEdicion;
-   private static int codigo = 0;
-   private String codigoInventariable;
+    private String tema;
+    private int numeroEdicion;
+    static int codigo = 0;
+    private String codigoInventariable;
 
     public Revista(String titulo, String editor, int anio, String tema, int numeroEdicion){
         super(titulo,editor,anio);
@@ -76,8 +95,17 @@ class Revista extends ProductoLectura implements Inventariable{
     @Override
     public String getCodigoInventario(){
         codigo ++;
-        String codigoInventariable = "R" + String.valueOf(this.codigo);
+        String codigoInventariable = "R" + String.valueOf(codigo);
         return codigoInventariable;
+    }
+    @Override
+    public String toString() {
+        return "Revista{" +
+                super.toString().substring(ProductoLectura.class.getSimpleName().length() + 1) + ", " + // Llamada a toString de la superclase
+                "tema='" + tema + '\'' +
+                ", numeroEdicion=" + numeroEdicion +
+                ", codigoInventariable='" + codigoInventariable + '\'' +
+                '}';
     }
 }
 
@@ -92,5 +120,12 @@ class Periodico extends ProductoLectura{
     public void mostrarInformacion() {
         super.mostrarInformacion();
         System.out.println("Fecha de publicación: " + this.fechaPublicacion);
+    }
+    @Override
+    public String toString() {
+        return "Periodico{" +
+                super.toString().substring(ProductoLectura.class.getSimpleName().length() + 1) + ", " + // Llamada a toString de la superclase
+                "fechaPublicacion=" + fechaPublicacion +
+                '}';
     }
 }

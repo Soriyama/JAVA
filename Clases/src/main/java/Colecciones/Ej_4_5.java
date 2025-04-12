@@ -8,7 +8,9 @@ public class Ej_4_5 {
         Scanner sc = new Scanner(System.in);
         ArrayList <String> mA = new ArrayList<>();
         String [] nombres = {"Juan", "Maria", "lucia", "Natu", "Esteban"};
-        for(int i = 0 ; i <=4; i++){
+        mA.add(0,"Natu");
+        System.out.println(mA.size());
+        for(int i = mA.size() ; i <=4; i++){
             mA.add(i,nombres[i]);
         }
         System.out.print("Introduce un nombre: ");
